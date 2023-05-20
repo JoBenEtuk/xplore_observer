@@ -3,10 +3,10 @@ import { Fragment } from 'react'
 import { animate } from './animate'
 
 /**Assets */
-import img1 from '@/assets/img1.webp'
-import img2 from '@/assets/img2.webp'
-import img3 from '@/assets/img3.webp'
-import img4 from '@/assets/img4.webp'
+import winter from '@/assets/winter.jpg'
+import summer from '@/assets/summer.jpg'
+import spring from '@/assets/spring.png'
+import autumn from '@/assets/autumn.jpg'
 type IL = {
 	name: string
 	href: string
@@ -48,10 +48,10 @@ const Index = () => {
 	]
 
 	const children = [
-		{ title: `ABOUT:BLANK ‘23 WINTER COLLECTION`, img: img1 },
-		{ title: `OLA:BLANK ‘23 WINTER COLLECTION`, img: img2 },
-		{ title: `NULL:BLANK ‘23 WINTER COLLECTION`, img: img3 },
-		{ title: `LUMIO:BLANK ‘23 WINTER COLLECTION`, img: img4 },
+		{ title: `ABOUT:BLANK ‘23 SPRING COLLECTION`, img: spring },
+		{ title: `ABOUT:BLANK ‘23 WINTER COLLECTION`, img: winter },
+		{ title: `ABOUT:BLANK ‘23 AUTUMN COLLECTION`, img: autumn },
+		{ title: `ABOUT:BLANK ‘23 SUMMER COLLECTION`, img: summer },
 	]
 
 	useEffectOnce(() => {

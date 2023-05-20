@@ -34,7 +34,7 @@ export const animate = () => {
 		index = wrap(index)
 
 		let tl = gsap.timeline({
-			defaults: { duration: 1.5, ease: 'power4.inOut' },
+			defaults: { duration: 1.4, ease: 'power4.inOut' },
 			onComplete: () => {
 				animating = false
 			},
@@ -45,24 +45,13 @@ export const animate = () => {
 		const nextSection = section[index]
 		const nextText = nextSection.querySelectorAll('.char')
 
-		const stagger = 0.011
-		const scaleY = 1.65
+		const scaleY = 1.5
 
 		/**Animate here */
-		tl.fromTo(
-			img[currentIndex],
-			{ xPercent: 0, scaleY: 1 },
-			{
-				xPercent: -100 * direction,
-				scaleY,
-			}
-		)
+		tl.fromTo(img[currentIndex], { xPercent: 0 }, { xPercent: -100 * direction })
 			.fromTo(
 				img[index],
-				{
-					xPercent: 100 * direction,
-					scaleY,
-				},
+				{ xPercent: 100 * direction, scaleY },
 				{ xPercent: 0, scaleY: 1 },
 				0
 			)
@@ -71,16 +60,23 @@ export const animate = () => {
 				{ yPercent: 0 },
 				{
 					yPercent: -100 * direction,
-					stagger,
+					stagger: {
+						each: 0.01,
+						from: 'random',
+					},
 				},
 				0
 			)
 			.fromTo(
 				nextText,
+				{ yPercent: 100 * direction },
 				{
-					yPercent: 100 * direction,
+					yPercent: 0,
+					stagger: {
+						each: 0.01,
+						from: 'random',
+					},
 				},
-				{ yPercent: 0, stagger },
 				0
 			)
 
