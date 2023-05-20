@@ -1,5 +1,4 @@
 import { useEffectOnce } from '@studio-lumio/hooks'
-import { Fragment } from 'react'
 import { animate } from './animate'
 
 /**Assets */
@@ -59,49 +58,46 @@ const Index = () => {
 	})
 
 	return (
-		<Fragment>
+		<div className='parent'>
 			<div className='grid'>
-				{new Array(30).fill(null).map((item, idx) => (
+				{new Array(30).fill(null).map((_, idx) => (
 					<div key={idx} />
 				))}
 			</div>
+			<div className='child'>
+				<header>
+					<nav>
+						{hl.map((link) => (
+							<a href={link.href} key={link.name}>
+								{link.name}
+							</a>
+						))}
+					</nav>
+				</header>
 
-			<div className='parent'>
-				<div className='child'>
-					<header>
-						<nav>
-							{hl.map((link) => (
-								<a href={link.href} key={link.name}>
-									{link.name}
-								</a>
-							))}
-						</nav>
-					</header>
+				{children.map((child, index) => (
+					<div className='section' key={index}>
+						<h1 data-splitting='chars' className='text'>
+							{child.title}
+						</h1>
+						<figure className='figure'>
+							<img className='img' src={child.img} alt='' width={928} height={682} />
+						</figure>
+					</div>
+				))}
 
-					{children.map((child, index) => (
-						<div className='section' key={index}>
-							<h1 data-splitting='chars' className='text'>
-								{child.title}
-							</h1>
-							<figure className='figure'>
-								<img className='img' src={child.img} alt='' width={928} height={682} />
-							</figure>
-						</div>
-					))}
-
-					<footer>
-						<nav>
-							{fl.map((link) => (
-								<a href={link.href} key={link.name}>
-									{link.name}
-								</a>
-							))}
-						</nav>
-						<p>scroll down &#8595;</p>
-					</footer>
-				</div>
+				<footer>
+					<nav>
+						{fl.map((link) => (
+							<a href={link.href} key={link.name}>
+								{link.name}
+							</a>
+						))}
+					</nav>
+					<p>scroll down &#8595;</p>
+				</footer>
 			</div>
-		</Fragment>
+		</div>
 	)
 }
 
