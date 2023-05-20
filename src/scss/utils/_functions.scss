@@ -1,0 +1,27 @@
+@use 'sass:math';
+
+@function z($name) {
+	@if index($z-indexes, $name) {
+		@return (length($z-indexes) - index($z-indexes, $name)) + 1;
+	} @else {
+		@warn 'There is no item "#{$name}" in this list; Choose one of: #{$z-indexes}';
+
+		@return null;
+	}
+}
+
+@function mobile-vw($pixels, $base-vw: $mobile-width) {
+	@return math.div($pixels * 100vw, $base-vw);
+}
+
+@function mobile-vh($pixels, $base-vh: $mobile-height) {
+	@return math.div($pixels * 100vh, $base-vh);
+}
+
+@function desktop-vw($pixels, $base-vw: $desktop-width) {
+	@return math.div($pixels * 100vw, $base-vw);
+}
+
+@function desktop-vh($pixels, $base-vh: $desktop-height) {
+	@return math.div($pixels * 100vh, $base-vh);
+}

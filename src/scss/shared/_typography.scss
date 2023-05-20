@@ -1,0 +1,41 @@
+%text-14 {
+  font-size: max(14px, 1.4rem);
+}
+%text-12 {
+  font-size: max(12px, 1.2rem);
+}
+
+%text-16 {
+  font-size: max(16px, 1.6rem);
+}
+
+%text-20 {
+  font-size: max(20px, 2rem);
+}
+
+%text-32 {
+  font-size: max(20px, 3.2rem);
+}
+
+%text-40 {
+  font-size: max(28px, 4rem);
+}
+
+%text-48 {
+  font-size: max(30px, 4.8rem);
+}
+
+%text-180 {
+  font-size: 18rem;
+
+  @include respondMax(mobile2x) {
+    font-size: max(60px, 12rem);
+  }
+}
+
+%text-150 {
+  font-size: 14rem;
+  @include respondMax(mobile3x) {
+    font-size: 20rem;
+  }
+}

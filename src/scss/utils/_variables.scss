@@ -1,0 +1,28 @@
+// Viewport Sizes
+$desktop-width: 1440px;
+$desktop-height: 900px;
+
+$mobile-width: 375px;
+$mobile-height: 650px;
+
+$col-white: #ffffff;
+$col-black: #000000;
+$gutter: var(--gutter);
+$block: var(--block);
+
+$z-indexes: (
+	'noscript',
+	'preloader',
+	'cursor',
+	'navigation',
+	'content',
+	'canvas',
+	'4',
+	'3',
+	'2',
+	'1'
+);
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-in-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);

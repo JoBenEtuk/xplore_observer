@@ -1,0 +1,40 @@
+// flexbox
+@mixin flex($justify: flex-start, $align: flex-start, $flow: row wrap) {
+	flex-flow: $flow;
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+// breakpoints
+$breakpoints: (
+	'mobile': 375px,
+	'mobile2x': 480px,
+	'mobile3x': 600px,
+	'tablet': 768px,
+	'tablet2x': 992px,
+	// 'tablet3x': 1024px,
+	'desktop': 1200px,
+	'desktop2x': 1440px,
+	// 'desktop3x': 1680px,
+) !default;
+
+@mixin respondMin($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Available breakpoints are: #{map-keys($breakpoints)}.";
+	}
+}
+
+@mixin respondMax($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (max-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Available breakpoints are: #{map-keys($breakpoints)}.";
+	}
+}

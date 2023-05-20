@@ -1,0 +1,76 @@
+html {
+	overflow-x: hidden;
+	scroll-behavior: initial;
+	overscroll-behavior: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+	font-size: 10px;
+	font-size: calc(100vw / 1440 * 10);
+	line-height: 1;
+
+	scrollbar-width: thin;
+
+	--gutter: 4rem;
+	--block: max(60px, 8rem);
+
+	@include respondMax('mobile3x') {
+		--gutter: 20px;
+	}
+
+	// -ms-overflow-style: none;
+	// scrollbar-width: none;
+	// &::-webkit-scrollbar {
+	//   display: none;
+	// }
+
+	&.lenis-stopped {
+		overflow: hidden;
+	}
+}
+
+body {
+	width: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+	color: $col-white;
+
+	::selection {
+		text-shadow: none;
+		background: $col-black;
+	}
+}
+
+:root {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+}
+
+button,
+[role='button'] {
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+}
+
+.whitespace {
+	display: inline !important;
+}

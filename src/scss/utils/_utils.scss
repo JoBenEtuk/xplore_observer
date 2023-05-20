@@ -1,0 +1,41 @@
+%cover {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+%container {
+  width: 100vw;
+  margin-inline: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+%center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+%flex-ac {
+  display: flex;
+  align-items: center;
+}
+
+%flex-ac-jb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+%show {
+  visibility: visible;
+  opacity: 1;
+}
