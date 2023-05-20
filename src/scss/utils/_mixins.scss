@@ -13,10 +13,8 @@ $breakpoints: (
 	'mobile3x': 600px,
 	'tablet': 768px,
 	'tablet2x': 992px,
-	// 'tablet3x': 1024px,
 	'desktop': 1200px,
 	'desktop2x': 1440px,
-	// 'desktop3x': 1680px,
 ) !default;
 
 @mixin respondMin($breakpoint) {

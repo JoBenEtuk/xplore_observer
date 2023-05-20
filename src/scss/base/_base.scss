@@ -10,19 +10,8 @@ html {
 	line-height: 1;
 
 	scrollbar-width: thin;
-
-	--gutter: 4rem;
-	--block: max(60px, 8rem);
-
-	@include respondMax('mobile3x') {
-		--gutter: 20px;
-	}
-
-	// -ms-overflow-style: none;
-	// scrollbar-width: none;
-	// &::-webkit-scrollbar {
-	//   display: none;
-	// }
+	--gutter: max(2rem, 20px);
+	--text: max(1.6rem, 14px);
 
 	&.lenis-stopped {
 		overflow: hidden;
@@ -33,17 +22,17 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow-x: hidden;
-	color: $col-white;
+	color: $col-black;
+	background: $col-white;
 
 	::selection {
 		text-shadow: none;
-		background: $col-black;
+		// background: $col-white;
 	}
 }
 
 :root {
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: 'Inter', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
