@@ -1,5 +1,5 @@
 {
-  "name": "xplore_blank",
+  "name": "xplore_observer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,11 @@
   },
   "dependencies": {
     "@studio-lumio/hooks": "^0.1.20",
-    "auto-bind": "^5.0.1",
     "gsap": "^3.10.4",
-    "lodash": "^4.17.21",
-    "prefix": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.57.1",
-    "splitting": "^1.0.6",
-    "three": "^0.152.2"
+    "splitting": "^1.0.6"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.185",
